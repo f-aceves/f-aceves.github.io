@@ -30,8 +30,8 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-                            <li><a href="Movie_heatmap.html">Landing</a></li>
-                            <li><a href="covid.html">Landing</a></li>
+                            <li><a href="Movie_heatmap.html">Movie</a></li>
+                            <li><a href="covid.html">Covid</a></li>
 							<li><a href="Audiobook.html">Audiobook</a></li>
 						</ul>
 					</nav>
@@ -47,10 +47,9 @@
 								<h1>Movie Heatmap: Exploring Feature Correlation</h1>
 							</header>
 							<div class="content">
-								<p>I'm interested to see which features have the highest
-                                    correlation to not just one another, but which have
-                                    the highest correlation to how much revenue a movie 
-                                    will make
+								<p>I'm interested to see which features have a high correlation
+									to one another. Secondly, I want to know which features are highly
+									correlated to the revenue generated (the gross) of a film.
 								</p>
 							</div>
 						</div>
@@ -89,8 +88,8 @@
 										Given this, I suspect that the features most correlated to gross (the revenue made by the film)
 										will be budget, score, and votes. I suspect the former because a movie with a large budget
 										means more money alocated to advertising. A high score implies it was well recieved and will 
-										intice more people to see it. Lastly, votes is the number of people that left a score, so more votes
-										imples that many more people have seen the film.
+										intice more people to see it. Lastly, the votes feature is the number of people that left a score, so more votes
+										implies that that many more people have seen the film.
 									</p>
 								</div>
 							</section>
@@ -108,7 +107,7 @@
 											</header>
 											<p>
 												Most features had hardly any missing values. In fact, I still had 96%
-												of the origional dataset even after dropping rows with missing values.
+												of the original dataset even after dropping rows with missing values.
 												<p>
 													Unfortunately, the one feature that I was very interested in--the budget of the film--
 													had about 27% missing values. 
@@ -130,7 +129,7 @@
 									<header class = 'major'> Heatmaps
 									</header>
 									<p>If we take leaving the Null values as our control, replacing them with
-										zero had and intersting result. Higher correlated featuers were strengthed
+										zero had and intersting result. Higher correlated featuers were strengthened
 										while lower correlated features were reduced when compared to budget.
 										The rest of the heatmap is identical which is expected. Imputing the mean 
 										served to only reduce highly correlated features.
@@ -155,8 +154,8 @@
 										<header class="major">
 											<h3>All Features</h3>
 										</header>
-										<p>Out of curiosity, I converted all object features to numeric and placed them all into 
-											a heatmap. However, none of the categorical data is highly correlated to budget.
+										<p>Out of curiosity, I converted all object features to numeric and 
+											placed them all into a heatmap. However, none of the categorical data is highly correlated to budget.
 										</p>
 										<a class = "image">
 											<img src = "images/All_Features_Heatmap.jpg" width="625" height="450"/>
@@ -175,11 +174,13 @@
 											<h3>Conclusion</h3>
 										</header>
 										<p>
-											I was correct that votes and budget had a high correlation to
-											the gross of a film. However, score turned out to have very low
-											correlation to gross. This suggests a film doesn't have to be
-											well recieved to earn a large profit or vice versa. One film that
-											comes to mind as an example of the former case is The Emoji Movie:
+											I was correct that votes and budget had a 
+											high correlation to the gross of a film. However, 
+											score turned out to have very low correlation to gross. 
+											This suggests a film doesn’t have to be well received 
+											to earn a large profit or vice versa. One film that 
+											comes to mind as an example of the former case 
+											The Emoji Movie:
 										</p>
 										<p>Score: 3.3; 
 											Gross: $217 million
